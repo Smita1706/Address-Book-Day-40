@@ -94,10 +94,10 @@ class Contact {
             throw "EMAIL ADDRESS is Incorrect";
     }
 }
-
+let addressBookArray = new Array();
 try{
-let contact1 = new Contact("Riya", "Jadhav", "Hadapsar", "Pune","Maharashtra", 412207, '91 9988776655', "riya@gmail.com");
-console.log(contact1);
+    addressBookArray .push(new Contact("Riya", "Jadhav", "Hadapsar", "Pune","Maharashtra", 412207, '91 9988776655', "riya@gmail.com"));
 }catch(e){
     console.log(e);
 }
+console.log(addressBookArray);
