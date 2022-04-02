@@ -6,6 +6,7 @@ const phoneNumberRegex = RegExp('^\\d{2}(\\s{1}\\d{10})$');
 const emailRegex = RegExp("^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$");
 
 class Contact {
+
     constructor(...params) {
         this.firstName = params[0];
         this.lastName = params[1];
@@ -13,7 +14,7 @@ class Contact {
         this.city = params[3];
         this.state = params[4];
         this.zip = params[5];
-        this.phoneNo = params[6];
+        this.phoneNumber = params[6];
         this.email = params[7];
     }
 
@@ -95,7 +96,7 @@ class Contact {
 }
 
 try{
-let contact1 = new Contact("riya", "Jadhav", "Hadapsar", "Pune","Maharashtra", 412207, '91 9988776655', "riya@gmail.com");
+let contact1 = new Contact("Riya", "Jadhav", "Hadapsar", "Pune","Maharashtra", 412207, '91 9988776655', "riya@gmail.com");
 console.log(contact1);
 }catch(e){
     console.log(e);
