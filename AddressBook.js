@@ -184,7 +184,18 @@ function searchByCityOrState(contactArray,cityorstate){
         contactArray.filter(name => name.state == cityorstate).forEach(contact=>console.log(contact.toString()));
     }
 }
+function isPresentInState(contactArray,name,stateName){
+    console.log('View person contact by state');
+   let contact=contactArray.filter(a => a.state == stateName).find(b => b.firstName==name);
+   console.log(contact.toString());
+}
 
+function isPresentInCity(contactArray, name, cityName) {
+    console.log('View person contact by city');
+   let contact=contactArray.filter(a => a.city == cityName).find(b => b.firstName==name);
+   console.log(contact.toString());
+    
+}
 try{
     addressBookArray .push(new Contact("Riya", "Jadhav", "Hadapsar", "Pune","Maharashtra", 412207, '91 9988776655', "riya@gmail.com"));
 }catch(e){
@@ -206,3 +217,5 @@ addContact(addressBookArray,"Priya", "Shinde");
 console.log(addressBookArray);
 searchByCityOrState(addressBookArray,'Pune');
 searchByCityOrState(addressBookArray,'Maharashtra');
+isPresentInCity(addressBookArray,"Riya","Pune")
+isPresentInState(addressBookArray,"Priya","Karnataka")
