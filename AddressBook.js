@@ -209,6 +209,21 @@ function sortedContacts(contactArray) {
     console.log('\nSorted contacts');
     console.log(contactArray.sort((a,b)=>a.firstName.localeCompare(b.firstName)));
 }
+function sortedContactsbyCity(contactArray) {
+    console.log('\nSorted contacts by city');
+    console.log(contactArray.sort((a,b)=>a.city.localeCompare(b.city)));
+}
+
+function sortedContactsByState(contactArray) {
+    console.log('\nSorted contacts by state');
+    console.log(contactArray.sort((a,b)=>a.state.localeCompare(b.state)));
+}
+
+function sortedContactsByZip(contactArray) {
+    console.log('\nSorted contacts by zip');
+    contactArray.sort(function (a, b) { return a.zip - b.zip });
+    contactArray.forEach(contact => console.log(contact.toString()));
+}
 try{
     addressBookArray .push(new Contact("Riya", "Jadhav", "Hadapsar", "Pune","Maharashtra", 412207, '91 9988776655', "riya@gmail.com"));
 }catch(e){
@@ -235,3 +250,6 @@ isPresentInState(addressBookArray,"Priya","Karnataka")
 getCountByCity(addressBookArray, "Pune");
 getCountByState(addressBookArray, "Karnataka");
 sortedContacts(addressBookArray);
+sortedContactsbyCity(addressBookArray);
+sortedContactsByState(addressBookArray);
+sortedContactsByZip(addressBookArray);
